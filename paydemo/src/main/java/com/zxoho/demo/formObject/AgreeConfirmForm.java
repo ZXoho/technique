@@ -3,20 +3,17 @@ package com.zxoho.demo.formObject;
 import lombok.Data;
 import lombok.NonNull;
 
-import javax.validation.constraints.NotNull;
-
 /**
  * Project: paydemo
- * Created by admin on 2018/12/7 19:55
- * 签约申请参数
+ * Created by admin on 2018/12/8 15:53
  */
 @Data
-public class AgreeApplyForm {
+public class AgreeConfirmForm {
 
     /**
      * 商户号
      */
-    //@NotNull
+    @NonNull
     private String merUserId;
 
     /**
@@ -29,33 +26,40 @@ public class AgreeApplyForm {
     /**
      *银行卡号
      */
-    //@NotNull
+    @NonNull
     private String acctno;
 
     /**
      * 身份证号
      */
-    //@NotNull
+    @NonNull
     private String idno;
 
     /**
      * 持卡人姓名
      */
-    //@NotNull
+    @NonNull
     private String acctName;
 
     /**
      * 银行卡预留电话
      */
-    //@NotNull
+    @NonNull
     private String mobile;
 
     /**
      * 有效期
      * 信用卡不能为空
      */
-
     private String vailidDate;
+
+
+    /**
+     * 短信验证码
+     */
+    @NonNull
+    private String smsCode;
 
     private String cvv2;
 }
+

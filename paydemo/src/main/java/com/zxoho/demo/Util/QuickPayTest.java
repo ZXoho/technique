@@ -10,8 +10,8 @@ public class QuickPayTest {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
-		//agreeapply();// 协议申请
-		agreeconfirm();// 协议申请确认
+		agreeapply();// 协议申请
+		//agreeconfirm();// 协议申请确认
 		//payapply();//支付申请
 		//pay();//支付申请确认
 		//testQuery();//交易查询
