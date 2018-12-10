@@ -27,34 +27,33 @@ public class ContractController {
 
     @PostMapping("/agreeapply")
     public ModelAndView agreeapply(@Valid AgreeApplyForm agreeApplyForm,
-                                   Map<String, String>map,
                                    BindingResult bindingResult) throws Exception{
         if(bindingResult.hasErrors()){
             //map.put("msg", bindingResult.getFieldError().getDefaultMessage());
-            map.put("url", "/contract/contract");
-            return new ModelAndView("/common/error", map);
+
+            return new ModelAndView("/common/error");
         }
         Map<String, String> params = CommonParam.buildCommonParamMap();
-        params.put("meiuserid", agreeApplyForm.getMerUserId());
+        params.put("meruserid", agreeApplyForm.getMerUserId());
         params.put("accttype", agreeApplyForm.getAcctType());
         params.put("acctno", agreeApplyForm.getAcctno());
         params.put("idno", agreeApplyForm.getIdno());
         params.put("acctname", agreeApplyForm.getAcctName());
         params.put("mobile", agreeApplyForm.getMobile());
-        params.put("cvv2", agreeApplyForm.getCvv2());
-        params.put("vailiddate", agreeApplyForm.getVailidDate());
+        if(agreeApplyForm.getCvv2().length() > 0)
+            params.put("cvv2", agreeApplyForm.getCvv2());
+        if(agreeApplyForm.getVailidDate()!=null)
+            params.put("vailiddate", agreeApplyForm.getVailidDate());
 
         Map<String, String> result = null;
         try {
-            result = QpayUtil.dorequest(QpayConstants.SYB_APIURL_QPAY+"/qpay"+"/agreeapply", params, QpayConstants.SYB_APPKEY);
-            for(String key : params.keySet())
-                result.put(key, params.get(key));
+            QpayUtil.dorequest(QpayConstants.SYB_APIURL_QPAY+"/agreeapply", params,QpayConstants.SYB_APPKEY);
         } catch (Exception e) {
-            //e.printStackTrace();
+            e.printStackTrace();
             result.put("url", "/contract/contract");
             result.put("msg", e.getMessage());
-            return new ModelAndView("/common/error", result);
+            return new ModelAndView("/common/error", params);
         }
-        return new ModelAndView("/contract/agreeConfirm", result);
+        return new ModelAndView("/contract/agreeConfirm", params);
     }
 }

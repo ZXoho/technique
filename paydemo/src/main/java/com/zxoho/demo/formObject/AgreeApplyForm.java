@@ -16,7 +16,7 @@ public class AgreeApplyForm {
     /**
      * 商户号
      */
-    //@NotNull
+    @NotNull
     private String merUserId;
 
     /**
@@ -29,33 +29,32 @@ public class AgreeApplyForm {
     /**
      *银行卡号
      */
-    //@NotNull
+    @NotNull
     private String acctno;
 
     /**
      * 身份证号
      */
-    //@NotNull
+    @NotNull
     private String idno;
 
     /**
      * 持卡人姓名
      */
-    //@NotNull
+    @NotNull
     private String acctName;
 
     /**
      * 银行卡预留电话
      */
-    //@NotNull
+    @NotNull
     private String mobile;
 
     /**
      * 有效期
      * 信用卡不能为空
      */
-
     private String vailidDate;
 
-    private String cvv2;
+    private String cvv2 ;
 }

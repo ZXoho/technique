@@ -26,9 +26,9 @@ public class QuickPayTest {
 		params.put("acctno","6217253100012097594");
 		params.put("idno","510722199804268799");
 		params.put("acctname","周鑫");
-		params.put("mobile","18280003725");
-		params.put("cvv2", "042");
-		params.put("validdate", "0823");
+		params.put("mobile","15183797524");
+		//params.put("cvv2", "042");
+		//params.put("validdate", "0823");
 		QpayUtil.dorequest(QpayConstants.SYB_APIURL_QPAY+"/agreeapply", params,QpayConstants.SYB_APPKEY);
 	}
 	
