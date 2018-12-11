@@ -13,7 +13,7 @@ public class AgreeConfirmForm {
     /**
      * 商户号
      */
-    @NonNull
+    //@NonNull
     private String merUserId;
 
     /**
@@ -21,30 +21,31 @@ public class AgreeConfirmForm {
      * 00为借记卡
      * 02位信用卡
      */
+    //@NonNull
     private String acctType;
 
     /**
      *银行卡号
      */
-    @NonNull
+    //@NonNull
     private String acctno;
 
     /**
      * 身份证号
      */
-    @NonNull
+    //@NonNull
     private String idno;
 
     /**
      * 持卡人姓名
      */
-    @NonNull
+    //@NonNull
     private String acctName;
 
     /**
      * 银行卡预留电话
      */
-    @NonNull
+    //@NonNull
     private String mobile;
 
     /**
@@ -57,7 +58,7 @@ public class AgreeConfirmForm {
     /**
      * 短信验证码
      */
-    @NonNull
+    //@NonNull
     private String smsCode;
 
     private String cvv2;

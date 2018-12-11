@@ -8,59 +8,59 @@
         <!-- 表单 -->
         <div class="row-fluid">
             <div class="span12">
-                <form class="form-horizontal">
+                <form class="form-horizontal" action="/contract/agreeConfirm" method="post">
                     <div class="control-group">
                         <label class="control-label" for="inputEmail">商户号</label>
                         <div class="controls">
-                            <input id="meruserid" type="text" value="${params[/"meruserid/"]}"/>
+                            <input id="merUserId" name="merUserId" type="text" value="${meruserid}"/>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputPassword">支付方式</label>
-                        <div class="accttype">
-                            <input id="accttype" type="text" value="${[/"params.accttype/"]}"/>
+                        <div class="controls">
+                            <input id="acctType" name="acctType" type="text" value="${accttype}"/>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputPassword">银行卡号</label>
                         <div class="controls">
-                            <input id="acctno" type="text" value="${[/"params.acctno/"]}"/>
+                            <input id="acctno" name="acctno" type="text" value="${acctno}"/>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputPassword">身份证号</label>
                         <div class="controls">
-                            <input id="idno" type="text" value="${[/"params.idno/"]}"/>
+                            <input id="idno" name="idno" type="text" value="${idno}"/>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputPassword">户名</label>
                         <div class="controls">
-                            <input id="acctname" type="text" value="${["/params.acctname/"]}"/>
+                            <input id="acctName" name="acctName" type="text" value="${acctname}"/>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputPassword">银行预留电话</label>
                         <div class="controls">
-                            <input id="mobile" type="text" value="${[/"params.mobile/"]}"/>
+                            <input id="mobile" name="mobile" type="text" value="${mobile}"/>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputPassword">安全码</label>
                         <div class="controls">
-                            <input id="cvv2" type="text" value="${[/"params.cvv2/"]}"/>
+                            <input id="cvv2" name="cvv2" type="text" <#if cvv2??>value="${cvv2}"</#if>/>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputPassword">有效期</label>
                         <div class="controls">
-                            <input id="validdate" type="text" value="${[/"params.validdate/"]}"/>
+                            <input id="validDate" name="validDate" type="text" <#if validdate??> value="${validdate}"</#if>/>
                         </div>
                     </div>
                     <div class="control-group">
                     <label class="control-label" for="inputPassword">验证码</label>
                     <div class="controls">
-                    <input id="smscode" type="text"/>
+                    <input id="smsCode" name="smsCode" type="text"/>
                     </div>
                     </div>
                     <div class="control-group">

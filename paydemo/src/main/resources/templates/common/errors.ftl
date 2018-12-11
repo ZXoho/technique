@@ -1,7 +1,8 @@
 <html>
 <head>
-    <meta charset="utf-8">
-    <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">"
+        <meta charset="utf-8">
+        <title>收银宝</title>
+        <link href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -11,7 +12,7 @@
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <h4>
                     错误!
-                </h4> <strong>${result.getRetCode()}</strong><a href="${result.getUrl()}" class="alert-link">3s后自动跳转</a>
+                </h4><strong>${msg}</strong><br><a href="${errorUrl}" class="alert-link">3s后自动跳转</a>
             </div>
         </div>
     </div>
@@ -19,6 +20,6 @@
 </body>
 
 <script>
-    setTimeout('location.href="${result.getUrl()}"', 3000)
+    setTimeout('location.href="${errorUrl}"', 3000)
 </script>
 </html>
