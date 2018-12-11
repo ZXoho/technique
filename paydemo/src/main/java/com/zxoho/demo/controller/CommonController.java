@@ -23,4 +23,13 @@ public class CommonController {
         return new ModelAndView("/contract/contract");
     }
 
+    @GetMapping("/getPayApplyPage")
+    public ModelAndView getPayApplyPage() {
+        return new ModelAndView("/pay/payApply");
+    }
+
+    @GetMapping("/getPayPage")
+    public ModelAndView getPayPage() {
+        return new ModelAndView("/pay/pay");
+    }
 }
